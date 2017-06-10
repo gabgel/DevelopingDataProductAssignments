@@ -1,0 +1,24 @@
+###R markdown and leaflet
+
+# Today is
+```{r, echo=FALSE, comment=''}
+date()
+```
+
+#My great map: population density
+```{r, echo=FALSE, warning=FALSE,}
+library(leaflet)
+df<-data.frame(lat=c(45.464161,43.771389,41.893056,40.833333 ), 
+               lng=c(9.190336,11.254167,12.482778,14.25 ), 
+               pden=c(7533.38,3742.46,2232.16,8273.34 ),
+               name=c("Milano", "Firenze", "Roma", "Napoli"))
+
+map<-df[,1:2]%>%
+  leaflet()%>%
+  addTiles()%>%
+  addCircleMarkers(popup = df$name, radius = sqrt(df$pden/3))
+  
+
+map
+```
+
