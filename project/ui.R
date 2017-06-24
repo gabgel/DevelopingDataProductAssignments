@@ -9,7 +9,9 @@ shinyUI(fluidPage(
       h3(""),
       h3("The first input you can modify is the time horizon of the elaboration, changing the minimum and the maximum values of the slider"),
       h3(""),
-      h3("The second input is a checkbox, you can choose wether or not display a regression line on the linear graph based on the subset time horizon defined with the slider")
+      h3("The second input is a checkbox, you can choose wether or not display a regression line on the linear graph based on the subset time horizon defined with the slider"),
+      h3(""),
+      tags$a(href="https://github.com/gabgel/DevelopingDataProductAssignments/tree/master/project",h3("Here you can finde the app's CODE"))
     ),
     tabPanel(h2("App"), 
       sidebarLayout(

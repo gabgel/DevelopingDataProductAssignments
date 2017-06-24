@@ -3,8 +3,8 @@ title: ddp_project
 account: gabgel
 server: shinyapps.io
 appId: 192042
-bundleId: 880684
+bundleId: 880692
 url: https://gabgel.shinyapps.io/ddp_project/
-when: 1498299628.42162
+when: 1498301866.10281
 asMultiple: FALSE
 asStatic: FALSE
