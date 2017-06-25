@@ -7,7 +7,7 @@ autosize: true
 Idea definition
 ========================================================
 
-Starting from the database "JohnsonJohnson", I tought about going through a short analysis to understand the composition and the evolution of the company's quarterly earnings, from 1960 to 1980. 
+Starting from the database "JohnsonJohnson", I tought about going through a short analysis to understand the composition and the evolution of the company's quarterly earnings, from 1960 to 1980.
 
 The analysis process followed 2 steps: 
 
@@ -16,18 +16,31 @@ The analysis process followed 2 steps:
 - Creation of a shiny app going from a static analysis framework to a dynamic one 
 
 
-Exploratory Analysis
+Exploratory Analysis - Data
 ========================================================
 
-Here we can see a summary of the dataset and 2 graphs, a boxplot and the quarterly earnings evolution through time.
+Here we can see a summary of the dataset
+
  
-```{r, echo=FALSE}
+```{r code, echo=FALSE}
 summary(JohnsonJohnson)
-boxplot(JohnsonJohnson)
-plot(JohnsonJohnson)
 ```
 
-But this is a static environment, it would be interesting to be able to modify some inputs having a quick response in the graphical analysis.
+
+Exploratory Analysis - Graphs
+=========================================================
+
+Quarterly earnings evolution through time and a boxplot.
+
+```{r graphs, echo=FALSE}
+par(fig=c(0,0.8,0,1), new=TRUE)
+plot(JohnsonJohnson)
+par(fig=c(0.65,1,0,1),new=TRUE)
+boxplot(JohnsonJohnson)
+```
+
+But this is a static environment, it would be interesting to be able to modify some inputs having a quick response in the graphs.
+
 
 Dynamic framework
 ========================================================
@@ -42,7 +55,7 @@ Here is the link to the [application](https://gabgel.shinyapps.io/ddp_project/) 
 
 Use the tab to navigate between the "How to use" and the "App" tab.
 
-Thank you
-========================================================
+Thank you!
+
 
 
